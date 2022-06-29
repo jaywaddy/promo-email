@@ -48,6 +48,7 @@
 
         body {
             background: var(--background );
+            overflow-x: hidden;
         }
 
         hr {
@@ -75,6 +76,7 @@
         .main-wrapper {
             width: 90%;
             max-width: 600px;
+            min-width: 300px
         }
 
         header {
@@ -138,7 +140,7 @@
         }
 
         section > img {
-            width: 250px;
+            max-width: 250px;
         }
 
         footer {
@@ -175,6 +177,31 @@
         footer p {
             color: var(--low_contrast);
         }
+
+        @media only screen and (min-width: 661px) {
+            .section-2 {
+                display: flex;
+                flex-flow: row-reverse;
+            }
+        }
+
+        @media only screen and (max-width: 660px) {
+            .email-content-wrapper {
+                width: 80%;
+                text-align: center;
+            }
+
+            section {
+                flex-direction: column;
+            }
+
+            footer .links {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
     </style>
 </head>
 <body>
@@ -195,15 +222,15 @@
                 <div class="email-content-wrapper">
                     <div class="hero">
                         <img src="/assets/hero.png" alt="Preparing Meal">
-                        <h1>It's a Take-out Night!</h1>
+                        <h1>Make it a Delivery Night!</h1>
                     </div>
                     <section class="section-1">
                         <img src="/assets/section_1.png" alt="Delivery">
                         <p>From something to something something else, This Product helps you [show up as your best self everywhere you write on the internet]. Claim an [Anual Plan] by [midnight tonight] and get an unbelievable 55% off!</p>
                     </section>
                     <section class="section-2">
-                        <p>From something to something something else, This Product helps you [show up as your best self everywhere you write on the internet]. Claim an [Anual Plan] by [midnight tonight] and get an unbelievable 55% off!</p>
                         <img src="/assets/section_2.png" alt="Meal Hand-off">
+                        <p>From something to something something else, This Product helps you [show up as your best self everywhere you write on the internet]. Claim an [Anual Plan] by [midnight tonight] and get an unbelievable 55% off!</p>
                     </section>
                     <section class="section-3">
                         <img src="/assets/section_3.png" alt="Delivery">
